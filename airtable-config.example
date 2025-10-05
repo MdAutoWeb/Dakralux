@@ -1,0 +1,16 @@
+# Airtable CRM Configuratie
+# Vervang deze waarden met jouw eigen Airtable gegevens
+
+# Je Airtable API Key (vind je in je Airtable account settings)
+AIRTABLE_API_KEY=your_airtable_api_key_here
+
+# Je Airtable Base ID (vind je in de URL van je base)
+AIRTABLE_BASE_ID=your_airtable_base_id_here
+
+# De naam van je tabel in Airtable (standaard: "Leads")
+AIRTABLE_TABLE_NAME=Leads
+
+# Voorbeeld:
+# AIRTABLE_API_KEY=key1234567890abcdef
+# AIRTABLE_BASE_ID=app1234567890abcdef
+# AIRTABLE_TABLE_NAME=Leads
