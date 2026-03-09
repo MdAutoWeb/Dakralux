@@ -112,6 +112,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Robby Seynaeve" }],
   creator: "Dakralux",
   publisher: "Dakralux",
+  icons: {
+    icon: "/Dakralux.jpg",
+  },
   robots: {
     index: true,
     follow: true,
