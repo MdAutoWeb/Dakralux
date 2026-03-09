@@ -5,77 +5,30 @@ import Button from "@/components/Button";
 import ReviewCarousel from "@/components/ReviewCarousel";
 
 export default function Home() {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Dakralux",
-    description:
-      "Betrouwbare dakwerker in Brugge en omstreken. Specialisten in dakbedekking, dakisolatie, Velux dakramen en platte daken.",
-    url: "https://dakralux.be",
-    telephone: "0472274709",
-    email: "dakralux@gmail.com",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Brieversweg 19",
-      addressLocality: "Sijsele",
-      postalCode: "8340",
-      addressCountry: "BE",
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: "51.2093",
-      longitude: "3.2242",
-    },
-    areaServed: [
-      "Brugge",
-      "Damme",
-      "Oostkamp",
-      "Knokke-Heist",
-      "Blankenberge",
-      "Zeebrugge",
-      "Jabbeke",
-      "Zedelgem",
-    ],
-    serviceType: [
-      "Dakbedekking",
-      "Dakisolatie",
-      "Velux Dakramen",
-      "Platte Daken",
-      "Dakonderhoud",
-    ],
-    openingHours: "Mo-Fr 07:00-17:00",
-    priceRange: "€€",
-    founder: {
-      "@type": "Person",
-      name: "Robby Seynaeve",
-    },
-    foundingDate: "2009",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.8",
-      reviewCount: "30",
-    },
-  };
   const services = [
     {
       title: "Dakbedekking",
       description: "Hoogwaardige materialen, jarenlange garantie",
       image: "/Dakwerken.jpg",
+      alt: "Lichtproject Brugge met dakbedekking en dakrenovatie door Dakralux",
     },
     {
       title: "Dakisolatie",
       description: "Energiebesparend, comfortabel woonklimaat",
       image: "/Isolatie.webp",
+      alt: "Industriële verlichting Knokke en dakisolatie relighting project",
     },
     {
       title: "Velux Dakramen",
       description: "Meer licht en lucht in uw huis",
       image: "/Velux.jpg",
+      alt: "Magazijn relighting Zedelgem met Velux dakramen en LED-installatie",
     },
     {
       title: "Platte Daken",
       description: "Moderne materialen, professionele aanleg",
       image: "/Platte daken.webp",
+      alt: "Lichtproject Damme met platte daken, relighting en LED-installatie",
     },
   ];
 
@@ -157,26 +110,22 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#1E1E1E]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-      />
+    <div className="bg-[#1E1E1E]">
       {/* Hero Section */}
-      <section className="relative bg-[#1E1E1E] text-white py-20 lg:py-32">
+      <section className="relative bg-[#1E1E1E] text-white py-12 lg:py-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold mb-4">
                 Uw Betrouwbare
                 <span className="block text-[#CADA44]">Dakwerker</span>
               </h1>
-              <p className="text-xl mb-8 text-white">
+              <p className="text-lg lg:text-xl mb-6 text-white">
                 Professionele dakwerkzaamheden met meer dan 15 jaar ervaring.
                 Van dakbedekking tot reparaties - wij zorgen voor kwaliteit en
                 vakmanschap.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <Button
                   size="lg"
                   className="bg-[#CADA44] text-[#1E1E1E] hover:bg-[#B8C73A] font-semibold"
@@ -201,11 +150,11 @@ export default function Home() {
               </div>
             </div>
             <div className="hidden lg:block">
-              <div className="bg-[#1E1E1E] rounded-lg p-8">
-                <h3 className="text-2xl font-semibold mb-6 text-[#CADA44]">
+              <div className="bg-[#1E1E1E] rounded-lg p-6">
+                <h3 className="text-xl font-semibold mb-4 text-[#CADA44]">
                   Waarom Dakralux?
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {benefits.slice(0, 4).map((benefit, index) => (
                     <div key={index} className="flex items-center">
                       <CheckCircle className="h-5 w-5 text-[#CADA44] mr-3" />
@@ -220,36 +169,38 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-[#1E1E1E]">
+      <section className="py-12 lg:py-16 bg-[#1E1E1E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
               Onze Diensten
             </h2>
-            <p className="text-xl text-white max-w-3xl mx-auto">
+            <p className="text-lg lg:text-xl text-white max-w-3xl mx-auto">
               Wij bieden een compleet pakket aan dakwerkzaamheden voor
               particulieren en bedrijven
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-8 [-webkit-overflow-scrolling:touch] scrollbar-hide snap-x snap-mandatory">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-[#1E1E1E] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-[#1E1E1E] rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-105 min-w-[260px] max-w-xs md:min-w-0 md:max-w-none flex-shrink-0 md:flex-shrink snap-start"
               >
                 <div className="relative h-48 w-full">
                   <Image
                     src={service.image}
-                    alt={service.title}
+                    alt={service.alt}
                     fill
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3 text-white">
+                <div className="p-5">
+                  <h3 className="text-lg lg:text-xl font-semibold mb-2 text-white">
                     {service.title}
                   </h3>
-                  <p className="text-white mb-4">{service.description}</p>
+                  <p className="text-sm lg:text-base text-white mb-3">
+                    {service.description}
+                  </p>
                   <Link
                     href="/diensten"
                     className="text-[#CADA44] hover:text-[#B8C73A] font-medium inline-flex items-center"
@@ -265,13 +216,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-[#1E1E1E]">
+      <section className="py-12 lg:py-16 bg-[#1E1E1E]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
               Wat Onze Klanten Zeggen
             </h2>
-            <p className="text-xl text-white mb-4">
+            <p className="text-lg lg:text-xl text-white mb-3">
               Echte reviews van tevreden klanten
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-white">

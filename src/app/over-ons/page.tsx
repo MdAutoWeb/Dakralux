@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import {
   CheckCircle,
   Phone,
@@ -10,6 +11,12 @@ import {
 } from "lucide-react";
 import Button from "@/components/Button";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Dakralux - Dakwerker Knokke-Heist & Brugge | Over ons",
+  description:
+    "Leer Dakralux kennen, uw dakwerker voor Knokke-Heist, Brugge en omgeving. Familiebedrijf met meer dan 15 jaar ervaring in alle dakwerken.",
+};
 
 export default function OverOnsPage() {
   const values = [

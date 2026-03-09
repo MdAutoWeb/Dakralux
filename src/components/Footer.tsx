@@ -19,18 +19,6 @@ export default function Footer() {
               opdracht tot een goed einde brengt? Dan zit u zeker goed bij
               Dakralux, een klein maar dynamisch familiebedrijf.
             </p>
-            <div className="flex space-x-4">
-              <div className="bg-[#1E1E1E] p-2 rounded border border-[#CADA44]">
-                <span className="text-sm font-semibold text-[#CADA44]">
-                  KvK: 12345678
-                </span>
-              </div>
-              <div className="bg-[#1E1E1E] p-2 rounded border border-[#CADA44]">
-                <span className="text-sm font-semibold text-[#CADA44]">
-                  Verzekerd
-                </span>
-              </div>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -97,7 +85,16 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-[#CADA44] mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white text-sm">
-            © 2024 Dakralux. Alle rechten voorbehouden.
+            © 2025 Dakralux. Website door{" "}
+            <a
+              href="https://www.webamo.be"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#CADA44] hover:text-[#B8C73A]"
+            >
+              Webamo
+            </a>
+            .
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link
@@ -105,12 +102,6 @@ export default function Footer() {
               className="text-white hover:text-[#CADA44] text-sm transition-colors"
             >
               Privacy Policy
-            </Link>
-            <Link
-              href="/algemene-voorwaarden"
-              className="text-white hover:text-[#CADA44] text-sm transition-colors"
-            >
-              Algemene Voorwaarden
             </Link>
           </div>
         </div>

@@ -360,17 +360,6 @@ export default function ContactPage() {
 
             <div>
               <h3 className="text-lg font-semibold text-white mb-2">
-                Zijn jullie verzekerd?
-              </h3>
-              <p className="text-white">
-                Absoluut! Wij zijn volledig verzekerd voor aansprakelijkheid en
-                hebben een AVB-verzekering. U kunt met een gerust hart zaken met
-                ons doen.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold text-white mb-2">
                 Werken jullie ook in het weekend?
               </h3>
               <p className="text-white">

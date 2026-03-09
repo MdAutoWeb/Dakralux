@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { CheckCircle, Phone, ArrowRight } from "lucide-react";
 import Button from "@/components/Button";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Dakwerken & dakisolatie Oostkamp | Diensten - Dakralux",
+  description:
+    "Ontdek alle dakwerken van Dakralux in Oostkamp, Brugge, Damme en Knokke-Heist: dakbedekking, dakisolatie, platte daken, Velux dakramen en dakonderhoud.",
+};
 
 export default function DienstenPage() {
   const services = [
@@ -17,12 +24,12 @@ export default function DienstenPage() {
         "10 jaar garantie op materiaal en arbeid",
       ],
       image: "/Dakwerken.jpg",
+      alt: "Lichtproject Brugge met nieuwe dakbedekking en relighting",
     },
     {
       title: "Dakisolatie",
       description: "Energiebesparend, comfortabel woonklimaat",
       features: [
-        "Spouwmuurisolatie",
         "Dakisolatie tussen en op de spanten",
         "Vloerisolatie",
         "Energielabel verbetering",
@@ -30,6 +37,7 @@ export default function DienstenPage() {
         "Rc waarde tot 8.0",
       ],
       image: "/Isolatie.webp",
+      alt: "Industriële verlichting Knokke en dakisolatie met LED-installatie",
     },
     {
       title: "Velux Dakramen",
@@ -43,6 +51,7 @@ export default function DienstenPage() {
         "Onderhoud en reparatie",
       ],
       image: "/Velux.jpg",
+      alt: "Lichtadvies en Velux dakramen voor relighting project in Damme",
     },
     {
       title: "Platte Daken",
@@ -56,6 +65,7 @@ export default function DienstenPage() {
         "10 jaar garantie",
       ],
       image: "/Platte daken.webp",
+      alt: "Magazijn relighting Zedelgem met plat dak en LED-installatie",
     },
     {
       title: "Dakonderhoud",
@@ -69,6 +79,7 @@ export default function DienstenPage() {
         "Rapportage met foto's",
       ],
       image: "/Merlo.webp",
+      alt: "Dakonderhoud en lichtadvies voor dakproject in Brugge",
     },
   ];
 
@@ -101,7 +112,7 @@ export default function DienstenPage() {
                 <div className="relative h-48 w-full">
                   <Image
                     src={service.image}
-                    alt={service.title}
+                    alt={service.alt}
                     fill
                     className="object-cover"
                   />

@@ -39,7 +39,7 @@ export default function ReviewCarousel({ reviews }: ReviewCarouselProps) {
     setCurrentIndex(index);
   };
 
-  // Toon altijd 3 reviews tegelijk
+  // Toon altijd 3 reviews tegelijk (voor desktop-carrousel)
   const visibleReviews = reviews.slice(currentIndex, currentIndex + 3);
   if (visibleReviews.length < 3) {
     // Als we aan het einde zijn, vul aan met reviews van het begin
@@ -50,12 +50,12 @@ export default function ReviewCarousel({ reviews }: ReviewCarouselProps) {
 
   return (
     <div className="relative">
-      {/* Reviews Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      {/* Reviews Grid: swipebar op mobiel, grid op desktop */}
+      <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-6 mb-6 [-webkit-overflow-scrolling:touch] scrollbar-hide snap-x snap-mandatory">
         {visibleReviews.map((review, index) => (
           <div
             key={`${currentIndex}-${index}`}
-            className="bg-[#1E1E1E] rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105"
+            className="bg-[#1E1E1E] rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105 min-w-[260px] max-w-xs md:min-w-0 md:max-w-none flex-shrink-0 md:flex-shrink snap-start"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center">

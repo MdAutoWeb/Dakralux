@@ -70,3 +70,13 @@ body {
   background: var(--background);
   transform: translate(-50%, -50%) rotate(45deg);
 }
+
+/* Hide scrollbars for horizontal swipe areas on mobile */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
