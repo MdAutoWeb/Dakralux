@@ -10,25 +10,25 @@ export default function Home() {
       title: "Dakbedekking",
       description: "Hoogwaardige materialen, jarenlange garantie",
       image: "/Dakwerken.jpg",
-      alt: "Lichtproject Brugge met dakbedekking en dakrenovatie door Dakralux",
+      alt: "Dakbedekking Brugge - Nieuwe dakbedekking en dakrenovatie door Dakralux",
     },
     {
       title: "Dakisolatie",
       description: "Energiebesparend, comfortabel woonklimaat",
       image: "/Isolatie.webp",
-      alt: "Industriële verlichting Knokke en dakisolatie relighting project",
+      alt: "Dakisolatie Brugge - Professionele dakisolatie door Dakralux",
     },
     {
       title: "Velux Dakramen",
       description: "Meer licht en lucht in uw huis",
       image: "/Velux.jpg",
-      alt: "Magazijn relighting Zedelgem met Velux dakramen en LED-installatie",
+      alt: "Velux dakramen Brugge - Velux dakramen installatie door Dakralux",
     },
     {
       title: "Platte Daken",
       description: "Moderne materialen, professionele aanleg",
       image: "/Platte daken.webp",
-      alt: "Lichtproject Damme met platte daken, relighting en LED-installatie",
+      alt: "Platte daken Brugge - Platte dakbedekking door Dakralux",
     },
   ];
 

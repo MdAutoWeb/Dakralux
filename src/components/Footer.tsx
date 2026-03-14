@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -78,6 +78,17 @@ export default function Footer() {
                 <Clock className="h-4 w-4 mr-2 text-[#CADA44]" />
                 <span className="text-white">Ma-Vr: 7:00 - 17:00</span>
               </li>
+              <li className="flex items-center">
+                <Facebook className="h-4 w-4 mr-2 text-[#CADA44]" />
+                <a
+                  href="https://www.facebook.com/dakralux/?locale=nl_BE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-[#CADA44] transition-colors"
+                >
+                  Volg ons op Facebook
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -94,7 +105,6 @@ export default function Footer() {
             >
               Webamo
             </a>
-            .
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link

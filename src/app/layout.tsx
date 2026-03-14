@@ -9,10 +9,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "RoofingContractor",
   name: "Dakralux",
   description:
-    "Betrouwbare dakwerker in Brugge en omstreken. Specialisten in dakbedekking, dakisolatie, Velux dakramen en platte daken.",
+    "Professionele dakwerker in Brugge en omstreken. Dakralux verzorgt dakwerken, dakbedekking, dakisolatie, Velux dakramen, platte daken, dakonderhoud en dakrenovatie voor particulieren en bedrijven.",
   url: "https://dakralux.be",
   telephone: "0472274709",
   email: "dakralux@gmail.com",
@@ -63,6 +63,8 @@ const localBusinessJsonLd = {
     },
   ],
   serviceType: [
+    "Dakwerken",
+    "Dakrenovatie",
     "Dakbedekking",
     "Dakisolatie",
     "Velux Dakramen",
@@ -85,35 +87,35 @@ const localBusinessJsonLd = {
 
 export const metadata: Metadata = {
   title:
-    "Dakralux - Dakwerker Brugge, Damme & Oostkamp | Dakbedekking, Dakisolatie & Velux",
+    "Dakwerker Brugge, Damme & Oostkamp | Dakwerken, Dakisolatie & Velux | Dakralux",
   description:
-    "Dakralux is uw betrouwbare dakwerker voor Brugge, Damme, Oostkamp en Knokke-Heist. Specialisten in dakbedekking, dakisolatie, Velux dakramen en platte daken. Gratis offerte binnen 24 uur!",
+    "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, dakbedekking, platte daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
   keywords: [
-    "relighting Brugge",
-    "lichtadvies Brugge",
-    "LED-installatie Brugge",
-    "relighting Knokke-Heist",
-    "lichtadvies Knokke-Heist",
-    "LED-installatie Knokke-Heist",
-    "relighting Oostkamp",
-    "lichtadvies Oostkamp",
-    "LED-installatie Oostkamp",
-    "relighting Damme",
-    "lichtadvies Damme",
-    "LED-installatie Damme",
     "dakwerker Brugge",
-    "dakwerker Damme",
-    "dakwerker Oostkamp",
-    "dakwerker Knokke-Heist",
-    "dakbedekking Brugge",
+    "dakwerken Brugge",
+    "dakrenovatie Brugge",
     "dakisolatie Brugge",
+    "dakbedekking Brugge",
+    "platte daken Brugge",
     "Velux dakramen Brugge",
+    "dakwerker Damme",
+    "dakwerken Damme",
+    "dakwerker Oostkamp",
+    "dakwerken Oostkamp",
+    "dakwerker Knokke-Heist",
+    "dakwerken Knokke-Heist",
+    "dakwerker Blankenberge",
+    "dakwerker Zeebrugge",
+    "dakwerker Jabbeke",
+    "dakwerker Zedelgem",
   ],
   authors: [{ name: "Robby Seynaeve" }],
   creator: "Dakralux",
   publisher: "Dakralux",
   icons: {
     icon: "/Dakralux.jpg",
+    shortcut: "/Dakralux.jpg",
+    apple: "/Dakralux.jpg",
   },
   robots: {
     index: true,
@@ -131,19 +133,16 @@ export const metadata: Metadata = {
     locale: "nl_BE",
     url: "https://dakralux.be",
     title:
-      "Dakralux - Dakwerker Brugge, Damme & Oostkamp | Professionele Dakwerkzaamheden",
+      "Dakwerker Brugge, Damme & Oostkamp | Dakwerken, Dakisolatie & Velux | Dakralux",
     description:
-      "Betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Dakbedekking, dakisolatie, Velux dakramen en meer. Gratis offerte binnen 24 uur!",
+      "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, dakbedekking, platte daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
     siteName: "Dakralux",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dakralux - Dakwerker Brugge & Damme",
+    title: "Dakwerker Brugge, Damme & Oostkamp | Dakwerken, Dakisolatie & Velux | Dakralux",
     description:
-      "Betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Gratis offerte binnen 24 uur!",
-  },
-  verification: {
-    google: "your-google-verification-code",
+      "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, dakbedekking, platte daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
   },
 };
 

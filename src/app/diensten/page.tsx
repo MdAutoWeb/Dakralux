@@ -5,9 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Dakwerken & dakisolatie Oostkamp | Diensten - Dakralux",
+  title: "Diensten | Dakwerken in Brugge en omgeving | Dakralux",
   description:
-    "Ontdek alle dakwerken van Dakralux in Oostkamp, Brugge, Damme en Knokke-Heist: dakbedekking, dakisolatie, platte daken, Velux dakramen en dakonderhoud.",
+    "Dakralux voert alle dakwerken uit in Brugge, Damme, Oostkamp, Knokke-Heist en omgeving. Dakbedekking, dakisolatie, dakrenovatie, platte daken, Velux dakramen en dakonderhoud. Vraag uw offerte aan.",
 };
 
 export default function DienstenPage() {
@@ -24,7 +24,7 @@ export default function DienstenPage() {
         "10 jaar garantie op materiaal en arbeid",
       ],
       image: "/Dakwerken.jpg",
-      alt: "Lichtproject Brugge met nieuwe dakbedekking en relighting",
+      alt: "Dakbedekking Brugge - Nieuwe dakbedekking door Dakralux",
     },
     {
       title: "Dakisolatie",
@@ -37,7 +37,7 @@ export default function DienstenPage() {
         "Rc waarde tot 8.0",
       ],
       image: "/Isolatie.webp",
-      alt: "Industriële verlichting Knokke en dakisolatie met LED-installatie",
+      alt: "Dakisolatie Brugge - Professionele dakisolatie door Dakralux",
     },
     {
       title: "Velux Dakramen",
@@ -51,7 +51,7 @@ export default function DienstenPage() {
         "Onderhoud en reparatie",
       ],
       image: "/Velux.jpg",
-      alt: "Lichtadvies en Velux dakramen voor relighting project in Damme",
+      alt: "Velux dakramen Brugge - Velux dakramen installatie door Dakralux",
     },
     {
       title: "Platte Daken",
@@ -65,7 +65,7 @@ export default function DienstenPage() {
         "10 jaar garantie",
       ],
       image: "/Platte daken.webp",
-      alt: "Magazijn relighting Zedelgem met plat dak en LED-installatie",
+      alt: "Platte daken Brugge - Platte dakbedekking door Dakralux",
     },
     {
       title: "Dakonderhoud",
@@ -79,7 +79,7 @@ export default function DienstenPage() {
         "Rapportage met foto's",
       ],
       image: "/Merlo.webp",
-      alt: "Dakonderhoud en lichtadvies voor dakproject in Brugge",
+      alt: "Dakonderhoud Brugge - Preventief dakonderhoud door Dakralux",
     },
   ];
 
@@ -90,11 +90,10 @@ export default function DienstenPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-[#CADA44]">
-              Onze Diensten
+              Dakwerken in Brugge en Omgeving
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto">
-              Dakralux biedt een compleet pakket aan dakwerkzaamheden. Van
-              nieuwbouw tot renovatie en onderhoud - wij hebben de expertise.
+              Dakralux biedt een compleet pakket aan dakwerkzaamheden in Brugge, Damme, Oostkamp, Knokke-Heist en omliggende gemeenten. Van nieuwbouw tot renovatie en onderhoud - wij hebben de expertise voor al uw dakprojecten.
             </p>
           </div>
         </div>
@@ -162,8 +161,7 @@ export default function DienstenPage() {
               Hoe Wij Werken
             </h2>
             <p className="text-xl text-white">
-              Van eerste contact tot oplevering - zo verloopt uw project bij
-              Dakralux
+              Van eerste contact tot oplevering - zo verloopt uw dakproject in Brugge en omgeving bij Dakralux
             </p>
           </div>
 
@@ -219,8 +217,7 @@ export default function DienstenPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Klaar om te Beginnen?</h2>
           <p className="text-xl text-[#1E1E1E] mb-8">
-            Neem contact op voor een vrijblijvende offerte. Onze dakexperts
-            helpen u graag verder.
+            Neem contact op voor een vrijblijvende offerte voor uw dakproject in Brugge, Damme, Oostkamp of Knokke-Heist. Onze dakexperts helpen u graag verder.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

@@ -13,9 +13,9 @@ import Button from "@/components/Button";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Dakralux - Dakwerker Knokke-Heist & Brugge | Over ons",
+  title: "Over Dakralux | Ervaren dakwerker in regio Brugge | Dakralux",
   description:
-    "Leer Dakralux kennen, uw dakwerker voor Knokke-Heist, Brugge en omgeving. Familiebedrijf met meer dan 15 jaar ervaring in alle dakwerken.",
+    "Dakralux is een betrouwbaar familiebedrijf met meer dan 15 jaar ervaring als dakwerker in Brugge, Damme, Oostkamp, Knokke-Heist en omliggende gemeenten. Specialist in alle dakwerken.",
 };
 
 export default function OverOnsPage() {
@@ -65,9 +65,7 @@ export default function OverOnsPage() {
               Over Dakralux
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto">
-              Een klein maar dynamisch familiebedrijf dat elke opdracht tot een
-              goed einde brengt. Wij staan garant voor alle soorten hellende
-              daken in Brugge en omstreken.
+              Een klein maar dynamisch familiebedrijf dat elke opdracht tot een goed einde brengt. Wij staan garant voor alle soorten dakwerken in Brugge, Damme, Oostkamp, Knokke-Heist en omliggende gemeenten.
             </p>
           </div>
         </div>
@@ -83,10 +81,7 @@ export default function OverOnsPage() {
               </h2>
               <div className="space-y-6 text-white">
                 <p className="text-lg leading-relaxed">
-                  Dakralux is ontstaan uit de passie voor vakmanschap en de wens
-                  om kwaliteitsvolle dakwerkzaamheden aan te bieden in de regio
-                  Brugge. Wat begon als een kleine eenmanszaak is uitgegroeid
-                  tot een betrouwbaar familiebedrijf.
+                  Dakralux is ontstaan uit de passie voor vakmanschap en de wens om kwaliteitsvolle dakwerkzaamheden aan te bieden in de regio Brugge. Wat begon als een kleine eenmanszaak is uitgegroeid tot een betrouwbaar familiebedrijf dat dakwerken uitvoert in Brugge, Damme, Oostkamp, Knokke-Heist, Blankenberge, Zeebrugge, Jabbeke en Zedelgem.
                 </p>
                 <p className="text-lg leading-relaxed">
                   Wij geloven dat een dak meer is dan alleen bescherming tegen
@@ -226,7 +221,7 @@ export default function OverOnsPage() {
               Ons Werkgebied
             </h2>
             <p className="text-xl text-white max-w-3xl mx-auto">
-              Wij zijn actief in Brugge en de omliggende gemeenten
+              Dakralux voert dakwerken uit in Brugge en de omliggende gemeenten in West-Vlaanderen
             </p>
           </div>
           <div className="bg-[#1E1E1E] rounded-lg p-8 border border-[#CADA44]">
@@ -273,8 +268,7 @@ export default function OverOnsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-6">Klaar om Samen te Werken?</h2>
           <p className="text-xl text-[#1E1E1E] mb-8">
-            Neem contact op voor een vrijblijvend gesprek over uw dakproject.
-            Wij adviseren u graag over de beste oplossing voor uw situatie.
+            Neem contact op voor een vrijblijvend gesprek over uw dakproject in Brugge of omgeving. Wij adviseren u graag over de beste oplossing voor uw situatie.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

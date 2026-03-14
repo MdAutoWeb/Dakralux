@@ -80,11 +80,10 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-[#CADA44]">
-              Contact
+              Contact Dakralux
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto">
-              Neem contact op voor een gratis offerte of advies. Wij staan klaar
-              om u te helpen met al uw dakwerkzaamheden.
+              Neem contact op voor een gratis offerte of advies voor uw dakproject in Brugge, Damme, Oostkamp, Knokke-Heist of omliggende gemeenten. Wij staan klaar om u te helpen met al uw dakwerkzaamheden.
             </p>
           </div>
         </div>
@@ -97,7 +96,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-white mb-8">
-                Vraag een Offerte Aan
+                Vraag een Offerte Aan voor Brugge en Omgeving
               </h2>
 
               {isSubmitted ? (
@@ -238,8 +237,7 @@ export default function ContactPage() {
                   </Button>
 
                   <p className="text-sm text-white text-center">
-                    * Verplichte velden. Wij nemen binnen 24 uur contact met u
-                    op.
+                    * Verplichte velden. Wij nemen binnen 24 uur contact met u op voor uw dakproject in Brugge of omgeving.
                   </p>
                 </form>
               )}
@@ -309,7 +307,7 @@ export default function ContactPage() {
                     Werkgebied
                   </h3>
                   <p className="text-white mb-4">
-                    Wij zijn actief in Brugge en omstreken:
+                    Dakralux voert dakwerken uit in Brugge en de omliggende gemeenten:
                   </p>
                   <div className="grid grid-cols-2 gap-2 text-sm text-white">
                     <p>• Brugge</p>
@@ -341,9 +339,7 @@ export default function ContactPage() {
                 Hoe snel kan ik een offerte verwachten?
               </h3>
               <p className="text-white">
-                Wij streven ernaar om binnen 24 uur na uw aanvraag contact met u
-                op te nemen en een afspraak in te plannen voor een gratis
-                inspectie en offerte.
+                Wij streven ernaar om binnen 24 uur na uw aanvraag contact met u op te nemen en een afspraak in te plannen voor een gratis inspectie en offerte. Dit geldt voor alle dakprojecten in Brugge, Damme, Oostkamp en omliggende gemeenten.
               </p>
             </div>
 

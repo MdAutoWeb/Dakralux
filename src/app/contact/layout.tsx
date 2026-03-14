@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Dakwerker Brugge & Damme | Contact & offerte - Dakralux",
+  title: "Contact | Dakwerker in Brugge, Damme & Oostkamp | Dakralux",
   description:
-    "Neem contact op met Dakralux voor dakwerken in Brugge, Damme, Oostkamp en Knokke-Heist. Vraag een gratis offerte of lichtadvies aan voor uw dakproject.",
+    "Neem contact op met Dakralux voor dakwerken in Brugge, Damme, Oostkamp, Knokke-Heist en omgeving. Vraag vrijblijvend uw gratis offerte aan voor dakbedekking, dakisolatie of dakrenovatie.",
 };
 
 export default function ContactLayout({
