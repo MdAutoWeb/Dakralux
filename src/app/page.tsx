@@ -146,9 +146,10 @@ export default function Home() {
                   </Link>
                 </Button>
               </div>
-              <div className="flex items-center text-sm text-white">
-                <CheckCircle className="h-4 w-4 mr-2 text-[#CADA44]" />
-                Gratis offerte binnen 24 uur
+              <div className="flex flex-wrap gap-4 text-sm text-white mt-2">
+                <span>⭐ 4.8/5 (30+ reviews)</span>
+                <span>🛠 15+ jaar ervaring</span>
+                <span>📍 Actief in Brugge</span>
               </div>
             </div>
             <div className="hidden lg:block">
