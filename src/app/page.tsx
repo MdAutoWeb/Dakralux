@@ -117,13 +117,15 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">
-                Uw Betrouwbare
-                <span className="block text-[#CADA44]">Dakwerker</span>
+                Dakwerker in Brugge voor dakrenovatie en dakisolatie
               </h1>
-              <p className="text-lg lg:text-xl mb-6 text-white">
-                Professionele dakwerkzaamheden met meer dan 15 jaar ervaring.
-                Van dakbedekking tot reparaties - wij zorgen voor kwaliteit en
-                vakmanschap.
+              <p className="text-lg lg:text-xl mb-4 text-white">
+                Dakralux helpt u met dakrenovatie, dakisolatie, platte daken en
+                Velux dakramen.
+              </p>
+              <p className="text-base lg:text-lg mb-6 text-white">
+                Actief in Brugge, Damme, Oostkamp, Knokke-Heist en omliggende
+                gemeenten.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <Button
@@ -139,7 +141,7 @@ export default function Home() {
                   className="border-[#CADA44] text-[#CADA44] hover:bg-[#CADA44] hover:text-[#1E1E1E]"
                 >
                   <Link href="/contact" className="flex items-center">
-                    Gratis Offerte
+                    Vraag uw offerte aan
                     <ArrowRight className="h-5 w-5 ml-2" />
                   </Link>
                 </Button>
@@ -173,11 +175,11 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-3">
-              Onze Diensten
+              Dakwerken in Brugge en omgeving
             </h2>
             <p className="text-lg lg:text-xl text-white max-w-3xl mx-auto">
-              Wij bieden een compleet pakket aan dakwerkzaamheden voor
-              particulieren en bedrijven
+              Dakbedekking, dakisolatie, platte daken, Velux dakramen en
+              dakonderhoud voor particulieren en bedrijven in regio Brugge.
             </p>
           </div>
           <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-8 [-webkit-overflow-scrolling:touch] scrollbar-hide snap-x snap-mandatory">
