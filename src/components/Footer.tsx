@@ -62,11 +62,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <Phone className="h-4 w-4 mr-2 text-[#CADA44]" />
-                <span className="text-white">0472 27 47 09</span>
+                <a href="tel:+32472274709" className="text-white hover:text-[#CADA44] transition-colors">
+                  0472 27 47 09
+                </a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-4 w-4 mr-2 text-[#CADA44]" />
-                <span className="text-white">dakralux@gmail.com</span>
+                <a href="mailto:dakralux@gmail.com" className="text-white hover:text-[#CADA44] transition-colors">
+                  dakralux@gmail.com
+                </a>
               </li>
               <li className="flex items-start">
                 <MapPin className="h-4 w-4 mr-2 text-[#CADA44] mt-0.5" />
@@ -74,9 +78,11 @@ export default function Footer() {
                   Brieversweg 19, 8340 Sijsele, Belgium
                 </span>
               </li>
-              <li className="flex items-center">
-                <Clock className="h-4 w-4 mr-2 text-[#CADA44]" />
-                <span className="text-white">Ma-Vr: 7:00 - 17:00</span>
+              <li className="flex items-start">
+                <Clock className="h-4 w-4 mr-2 text-[#CADA44] mt-0.5" />
+                <span className="text-white">
+                  Ma-Vr: 7:00 - 17:00<br />Za: 8:00 - 12:00
+                </span>
               </li>
               <li className="flex items-center">
                 <Facebook className="h-4 w-4 mr-2 text-[#CADA44]" />

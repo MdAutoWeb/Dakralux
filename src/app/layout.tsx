@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,9 +11,10 @@ const localBusinessJsonLd = {
   "@type": "RoofingContractor",
   name: "Dakralux",
   description:
-    "Professionele dakwerker in Brugge en omstreken. Dakralux verzorgt dakwerken, dakbedekking, dakisolatie, Velux dakramen, platte daken, dakonderhoud en dakrenovatie voor particulieren en bedrijven.",
-  url: "https://dakralux.be",
-  telephone: "0472274709",
+    "Professionele dakwerker in Brugge en omstreken. Dakralux verzorgt dakwerken, dakbedekking, dakisolatie, Velux dakramen, hellende daken, dakonderhoud en dakrenovatie voor particulieren en bedrijven.",
+  url: "https://www.dakralux.be",
+  image: "https://www.dakralux.be/Dakralux.jpg",
+  telephone: "+32472274709",
   email: "dakralux@gmail.com",
   address: {
     "@type": "PostalAddress",
@@ -25,42 +25,18 @@ const localBusinessJsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "51.2093",
-    longitude: "3.2242",
+    latitude: "51.20937",
+    longitude: "3.22419",
   },
   areaServed: [
-    {
-      "@type": "City",
-      name: "Brugge",
-    },
-    {
-      "@type": "City",
-      name: "Damme",
-    },
-    {
-      "@type": "City",
-      name: "Oostkamp",
-    },
-    {
-      "@type": "City",
-      name: "Knokke-Heist",
-    },
-    {
-      "@type": "City",
-      name: "Blankenberge",
-    },
-    {
-      "@type": "City",
-      name: "Zeebrugge",
-    },
-    {
-      "@type": "City",
-      name: "Jabbeke",
-    },
-    {
-      "@type": "City",
-      name: "Zedelgem",
-    },
+    { "@type": "City", name: "Brugge" },
+    { "@type": "City", name: "Damme" },
+    { "@type": "City", name: "Oostkamp" },
+    { "@type": "City", name: "Knokke-Heist" },
+    { "@type": "City", name: "Blankenberge" },
+    { "@type": "City", name: "Zeebrugge" },
+    { "@type": "City", name: "Jabbeke" },
+    { "@type": "City", name: "Zedelgem" },
   ],
   serviceType: [
     "Dakwerken",
@@ -68,10 +44,23 @@ const localBusinessJsonLd = {
     "Dakbedekking",
     "Dakisolatie",
     "Velux Dakramen",
-    "Platte Daken",
+    "Hellende Daken",
     "Dakonderhoud",
   ],
-  openingHours: "Mo-Fr 07:00-17:00",
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "17:00",
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Saturday"],
+      opens: "08:00",
+      closes: "12:00",
+    },
+  ],
   priceRange: "€€",
   founder: {
     "@type": "Person",
@@ -81,22 +70,41 @@ const localBusinessJsonLd = {
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.8",
+    bestRating: "5",
+    worstRating: "1",
     reviewCount: "30",
+  },
+  sameAs: [
+    "https://www.facebook.com/dakralux/?locale=nl_BE",
+    "https://www.google.com/maps/place/Dakralux/@51.20937,3.22419,17z/data=!4m2!3m1!1s0x47c3597f03074acf:0x60d16a48c976344b",
+  ],
+  hasMap: "https://www.google.com/maps/place/Dakralux/@51.20937,3.22419,17z/data=!4m2!3m1!1s0x47c3597f03074acf:0x60d16a48c976344b",
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Dakralux",
+  url: "https://www.dakralux.be",
+  inLanguage: "nl-BE",
+  publisher: {
+    "@type": "RoofingContractor",
+    name: "Dakralux",
+    url: "https://www.dakralux.be",
   },
 };
 
 export const metadata: Metadata = {
-  title:
-    "Dakwerker Brugge, Damme & Oostkamp | Dakwerken, Dakisolatie & Velux | Dakralux",
+  title: "Dakwerker Brugge | Dakrenovatie & Dakisolatie | Dakralux",
   description:
-    "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, dakbedekking, platte daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
+    "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, hellende daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
   keywords: [
     "dakwerker Brugge",
     "dakwerken Brugge",
     "dakrenovatie Brugge",
     "dakisolatie Brugge",
     "dakbedekking Brugge",
-    "platte daken Brugge",
+    "hellende daken Brugge",
     "Velux dakramen Brugge",
     "dakwerker Damme",
     "dakwerken Damme",
@@ -112,6 +120,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Robby Seynaeve" }],
   creator: "Dakralux",
   publisher: "Dakralux",
+  alternates: {
+    canonical: "https://www.dakralux.be",
+  },
   icons: {
     icon: "/Dakralux.jpg",
     shortcut: "/Dakralux.jpg",
@@ -131,18 +142,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "nl_BE",
-    url: "https://dakralux.be",
-    title:
-      "Dakwerker Brugge, Damme & Oostkamp | Dakwerken, Dakisolatie & Velux | Dakralux",
+    url: "https://www.dakralux.be",
+    title: "Dakwerker Brugge | Dakrenovatie & Dakisolatie | Dakralux",
     description:
-      "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, dakbedekking, platte daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
+      "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, hellende daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
     siteName: "Dakralux",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dakwerker Brugge, Damme & Oostkamp | Dakwerken, Dakisolatie & Velux | Dakralux",
+    title: "Dakwerker Brugge | Dakrenovatie & Dakisolatie | Dakralux",
     description:
-      "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, dakbedekking, platte daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
+      "Dakralux is uw betrouwbare dakwerker in Brugge, Damme, Oostkamp en Knokke-Heist. Specialist in dakwerken, dakisolatie, hellende daken en Velux dakramen. Vraag vrijblijvend uw offerte aan.",
   },
 };
 
@@ -153,15 +163,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl">
-      <body className={`${inter.className} antialiased`}>
-        <Script
+      <head>
+        <script
           id="local-business-schema"
           type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessJsonLd),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
+        <script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
+      <body className={`${inter.className} antialiased`}>
         <Header />
         <main className="pt-24">{children}</main>
         <Footer />

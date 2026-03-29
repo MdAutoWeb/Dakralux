@@ -1,14 +1,20 @@
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://dakralux.be/sitemap.xml
-
-# Crawl-delay voor respectvolle crawling
-Crawl-delay: 1
-
-# Disallow admin areas (als die er zijn)
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.dakralux.be/sitemap.xml

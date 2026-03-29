@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Review {
@@ -52,9 +52,9 @@ export default function ReviewCarousel({ reviews }: ReviewCarouselProps) {
     <div className="relative">
       {/* Reviews Grid: swipebar op mobiel, grid op desktop */}
       <div className="flex gap-4 overflow-x-auto pb-2 md:grid md:grid-cols-3 md:gap-6 mb-6 [-webkit-overflow-scrolling:touch] scrollbar-hide snap-x snap-mandatory">
-        {visibleReviews.map((review, index) => (
+        {visibleReviews.map((review) => (
           <div
-            key={`${currentIndex}-${index}`}
+            key={review.name}
             className="bg-[#1E1E1E] rounded-lg p-4 transition-all duration-300 hover:transform hover:scale-105 min-w-[260px] max-w-xs md:min-w-0 md:max-w-none flex-shrink-0 md:flex-shrink snap-start"
           >
             <div className="flex items-center justify-between mb-3">

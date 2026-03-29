@@ -25,10 +25,10 @@ export default function Home() {
       alt: "Velux dakramen Brugge - Velux dakramen installatie door Dakralux",
     },
     {
-      title: "Platte Daken",
-      description: "Moderne materialen, professionele aanleg",
+      title: "Hellende Daken",
+      description: "Renovatie en aanleg van hellende daken",
       image: "/Platte daken.webp",
-      alt: "Platte daken Brugge - Platte dakbedekking door Dakralux",
+      alt: "Hellende daken Brugge - Renovatie hellende daken door Dakralux",
     },
   ];
 
@@ -120,7 +120,7 @@ export default function Home() {
                 Dakwerker in Brugge voor dakrenovatie en dakisolatie
               </h1>
               <p className="text-lg lg:text-xl mb-4 text-white">
-                Dakralux helpt u met dakrenovatie, dakisolatie, platte daken en
+                Dakralux helpt u met dakrenovatie, dakisolatie, hellende daken en
                 Velux dakramen.
               </p>
               <p className="text-base lg:text-lg mb-6 text-white">
@@ -128,13 +128,15 @@ export default function Home() {
                 gemeenten.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mb-6">
-                <Button
-                  size="lg"
-                  className="bg-[#CADA44] text-[#1E1E1E] hover:bg-[#B8C73A] font-semibold"
-                >
-                  <Phone className="h-5 w-5 mr-2" />
-                  Bel Nu: 0472 27 47 09
-                </Button>
+                <a href="tel:+32472274709">
+                  <Button
+                    size="lg"
+                    className="bg-[#CADA44] text-[#1E1E1E] hover:bg-[#B8C73A] font-semibold"
+                  >
+                    <Phone className="h-5 w-5 mr-2" />
+                    Bel Nu: 0472 27 47 09
+                  </Button>
+                </a>
                 <Button
                   variant="outline"
                   size="lg"
@@ -179,7 +181,7 @@ export default function Home() {
               Dakwerken in Brugge en omgeving
             </h2>
             <p className="text-lg lg:text-xl text-white max-w-3xl mx-auto">
-              Dakbedekking, dakisolatie, platte daken, Velux dakramen en
+              Dakbedekking, dakisolatie, hellende daken, Velux dakramen en
               dakonderhoud voor particulieren en bedrijven in regio Brugge.
             </p>
           </div>
@@ -194,6 +196,8 @@ export default function Home() {
                     src={service.image}
                     alt={service.alt}
                     fill
+                    priority={index === 0}
+                    sizes="(max-width: 768px) 260px, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover"
                   />
                 </div>

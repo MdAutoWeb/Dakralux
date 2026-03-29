@@ -7,7 +7,10 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Diensten | Dakwerken in Brugge en omgeving | Dakralux",
   description:
-    "Dakralux voert alle dakwerken uit in Brugge, Damme, Oostkamp, Knokke-Heist en omgeving. Dakbedekking, dakisolatie, dakrenovatie, platte daken, Velux dakramen en dakonderhoud. Vraag uw offerte aan.",
+    "Dakralux voert alle dakwerken uit in Brugge, Damme, Oostkamp, Knokke-Heist en omgeving. Dakbedekking, dakisolatie, dakrenovatie, hellende daken, Velux dakramen en dakonderhoud. Vraag uw offerte aan.",
+  alternates: {
+    canonical: "https://www.dakralux.be/diensten",
+  },
 };
 
 export default function DienstenPage() {
@@ -54,18 +57,18 @@ export default function DienstenPage() {
       alt: "Velux dakramen Brugge - Velux dakramen installatie door Dakralux",
     },
     {
-      title: "Platte Daken",
-      description: "Moderne materialen, professionele aanleg",
+      title: "Hellende Daken",
+      description: "Complete renovatie en aanleg van hellende daken",
       features: [
-        "Bitumineuze dakbedekking",
-        "EPDM rubber dakbedekking",
-        "PVC dakbedekking",
-        "Dakisolatie",
-        "Dakafvoer systemen",
-        "10 jaar garantie",
+        "Renovatie van hellende daken",
+        "Pannendaken (keramiek en beton)",
+        "Leien en zinken daken",
+        "Onderdakfolie en tengels",
+        "Goten en afwatering",
+        "10 jaar garantie op materiaal en arbeid",
       ],
       image: "/Platte daken.webp",
-      alt: "Platte daken Brugge - Platte dakbedekking door Dakralux",
+      alt: "Hellende daken Brugge - Renovatie hellende daken door Dakralux",
     },
     {
       title: "Dakonderhoud",
@@ -113,13 +116,14 @@ export default function DienstenPage() {
                     src={service.image}
                     alt={service.alt}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                   />
                 </div>
                 <div className="p-8">
                   <div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">
-                      {service.title}
+                      {service.title} in Brugge en Omgeving
                     </h3>
                     <p className="text-white">{service.description}</p>
                   </div>
@@ -220,13 +224,15 @@ export default function DienstenPage() {
             Neem contact op voor een vrijblijvende offerte voor uw dakproject in Brugge, Damme, Oostkamp of Knokke-Heist. Onze dakexperts helpen u graag verder.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              size="lg"
-              className="bg-[#1E1E1E] text-[#CADA44] hover:bg-[#2A2A2A]"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Bel Nu: 0472 27 47 09
-            </Button>
+            <a href="tel:+32472274709">
+              <Button
+                size="lg"
+                className="bg-[#1E1E1E] text-[#CADA44] hover:bg-[#2A2A2A]"
+              >
+                <Phone className="h-5 w-5 mr-2" />
+                Bel Nu: 0472 27 47 09
+              </Button>
+            </a>
             <Button
               variant="outline"
               size="lg"

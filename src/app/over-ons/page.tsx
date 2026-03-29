@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "Over Dakralux | Ervaren dakwerker in regio Brugge | Dakralux",
   description:
     "Dakralux is een betrouwbaar familiebedrijf met meer dan 15 jaar ervaring als dakwerker in Brugge, Damme, Oostkamp, Knokke-Heist en omliggende gemeenten. Specialist in alle dakwerken.",
+  alternates: {
+    canonical: "https://www.dakralux.be/over-ons",
+  },
 };
 
 export default function OverOnsPage() {
