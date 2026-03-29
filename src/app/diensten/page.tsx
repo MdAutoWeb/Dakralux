@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { CheckCircle, Phone, ArrowRight } from "lucide-react";
-import Button from "@/components/Button";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -86,70 +85,84 @@ export default function DienstenPage() {
     },
   ];
 
+  const steps = [
+    { num: "01", title: "Contact", body: "U neemt contact op via telefoon, e-mail of het contactformulier." },
+    { num: "02", title: "Inspectie", body: "Wij komen langs voor een gratis inspectie en advies op maat." },
+    { num: "03", title: "Offerte", body: "U ontvangt binnen 24 uur een heldere offerte, zonder verrassingen." },
+    { num: "04", title: "Uitvoering", body: "Ons team voert het werk vakkundig uit met kwaliteitsgarantie." },
+  ];
+
   return (
     <div className="min-h-screen bg-[#1E1E1E]">
-      {/* Hero Section */}
-      <section className="bg-[#1E1E1E] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-[#CADA44]">
-              Dakwerken in Brugge en Omgeving
-            </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto">
-              Dakralux biedt een compleet pakket aan dakwerkzaamheden in Brugge, Damme, Oostkamp, Knokke-Heist en omliggende gemeenten. Van nieuwbouw tot renovatie en onderhoud - wij hebben de expertise voor al uw dakprojecten.
-            </p>
-          </div>
+
+      {/* ── PAGE HERO ────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden pt-32 pb-20">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#181818] to-[#1E1E1E]" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-[#CADA44] text-sm font-medium tracking-widest uppercase mb-4">
+            Wat wij doen
+          </p>
+          <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+            Dakwerken in Brugge<br />
+            <span className="text-[#CADA44]">en omgeving</span>
+          </h1>
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            Van dakbedekking tot isolatie en Velux dakramen — Dakralux levert vakwerk
+            in Brugge, Damme, Oostkamp, Knokke-Heist en omliggende gemeenten.
+          </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20">
+      {/* ── SERVICES ─────────────────────────────────────────────────── */}
+      <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {services.map((service, i) => (
               <div
-                key={index}
-                className="bg-[#1E1E1E] rounded-lg overflow-hidden"
+                key={i}
+                className="group bg-[#242424] rounded-2xl overflow-hidden border border-white/5 hover:border-[#CADA44]/30 transition-all duration-300"
               >
-                <div className="relative h-48 w-full">
+                {/* Image */}
+                <div className="relative h-52 w-full overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.alt}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#242424] via-[#242424]/20 to-transparent" />
+                  <div className="absolute bottom-4 left-6">
+                    <h2 className="text-2xl font-bold text-white">
+                      {service.title}
+                    </h2>
+                    <p className="text-white/60 text-sm mt-0.5">{service.description}</p>
+                  </div>
                 </div>
-                <div className="p-8">
-                  <div className="mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {service.title} in Brugge en Omgeving
-                    </h3>
-                    <p className="text-white">{service.description}</p>
-                  </div>
 
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-white mb-3">
-                      Wat wij bieden:
-                    </h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-[#CADA44] mr-2 mt-0.5 flex-shrink-0" />
-                          <span className="text-white">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex justify-center">
-                    <Button className="bg-[#CADA44] text-[#1E1E1E] hover:bg-[#B8C73A]">
-                      <Link href="/contact" className="flex items-center">
-                        <Phone className="h-4 w-4 mr-2" />
-                        Offerte
-                      </Link>
-                    </Button>
-                  </div>
+                {/* Body */}
+                <div className="p-6">
+                  <p className="text-[#CADA44] text-xs font-medium tracking-widest uppercase mb-4">
+                    Wat wij bieden
+                  </p>
+                  <ul className="space-y-2.5 mb-6">
+                    {service.features.map((feature, j) => (
+                      <li key={j} className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#CADA44]/10 flex items-center justify-center mt-0.5">
+                          <CheckCircle className="h-3.5 w-3.5 text-[#CADA44]" />
+                        </div>
+                        <span className="text-white/75 text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-2 bg-[#CADA44]/10 hover:bg-[#CADA44] text-[#CADA44] hover:text-[#1E1E1E] border border-[#CADA44]/30 hover:border-[#CADA44] rounded-lg px-5 py-2.5 text-sm font-medium transition-all duration-300"
+                  >
+                    <Phone className="h-4 w-4" />
+                    Offerte aanvragen
+                    <ArrowRight className="h-4 w-4 ml-1" />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -157,95 +170,74 @@ export default function DienstenPage() {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-[#1E1E1E]">
+      {/* ── HOW WE WORK ──────────────────────────────────────────────── */}
+      <section className="py-20 lg:py-28 bg-[#181818]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Hoe Wij Werken
+            <p className="text-[#CADA44] text-sm font-medium tracking-widest uppercase mb-3">
+              Werkwijze
+            </p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+              Hoe wij werken
             </h2>
-            <p className="text-xl text-white">
-              Van eerste contact tot oplevering - zo verloopt uw dakproject in Brugge en omgeving bij Dakralux
+            <p className="text-white/60 max-w-xl mx-auto">
+              Van eerste contact tot oplevering — zo verloopt uw dakproject bij Dakralux.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-[#CADA44] text-[#1E1E1E] rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                1
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {steps.map((step, i) => (
+              <div key={i} className="relative">
+                {/* connector line */}
+                {i < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-8 left-[calc(50%+2rem)] right-[-calc(50%-2rem)] h-px bg-white/10" />
+                )}
+                <div className="bg-[#242424] rounded-2xl p-6 border border-white/5 text-center">
+                  <div className="w-14 h-14 rounded-2xl bg-[#CADA44]/10 border border-[#CADA44]/20 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-[#CADA44] font-bold text-lg">{step.num}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-white/55 text-sm leading-relaxed">{step.body}</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Contact</h3>
-              <p className="text-white">
-                U neemt contact met ons op via telefoon, email of ons
-                contactformulier
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-[#CADA44] text-[#1E1E1E] rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">
-                Inspectie
-              </h3>
-              <p className="text-white">
-                Wij komen langs voor een gratis inspectie en advies op maat
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-[#CADA44] text-[#1E1E1E] rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">Offerte</h3>
-              <p className="text-white">
-                U ontvangt binnen 24 uur een duidelijke offerte zonder
-                verrassingen
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-[#CADA44] text-[#1E1E1E] rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                4
-              </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">
-                Uitvoering
-              </h3>
-              <p className="text-white">
-                Wij voeren het werk vakkundig uit met kwaliteitsgarantie
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-[#CADA44] text-[#1E1E1E]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-6">Klaar om te Beginnen?</h2>
-          <p className="text-xl text-[#1E1E1E] mb-8">
-            Neem contact op voor een vrijblijvende offerte voor uw dakproject in Brugge, Damme, Oostkamp of Knokke-Heist. Onze dakexperts helpen u graag verder.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* ── CTA BAND ─────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-[#CADA44] py-16">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-black rounded-full -translate-y-1/2" />
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-black rounded-full translate-y-1/2" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#1E1E1E] mb-2">
+              Klaar om te beginnen?
+            </h2>
+            <p className="text-[#1E1E1E]/70 text-lg">
+              Gratis offerte binnen 24 uur. Geen verplichtingen.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
             <a href="tel:+32472274709">
-              <Button
-                size="lg"
-                className="bg-[#1E1E1E] text-[#CADA44] hover:bg-[#2A2A2A]"
-              >
-                <Phone className="h-5 w-5 mr-2" />
-                Bel Nu: 0472 27 47 09
-              </Button>
+              <button className="flex items-center gap-2 bg-[#1E1E1E] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#2a2a2a] transition-colors whitespace-nowrap">
+                <Phone className="h-5 w-5" />
+                0472 27 47 09
+              </button>
             </a>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-[#1E1E1E] text-[#1E1E1E] hover:bg-[#1E1E1E] hover:text-[#CADA44]"
+            <Link
+              href="/contact"
+              className="flex items-center gap-2 border-2 border-[#1E1E1E] text-[#1E1E1E] font-semibold px-6 py-3 rounded-lg hover:bg-[#1E1E1E] hover:text-[#CADA44] transition-all duration-300 whitespace-nowrap"
             >
-              <Link href="/contact" className="flex items-center">
-                Contactformulier
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Link>
-            </Button>
+              Offerte aanvragen
+              <ArrowRight className="h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>
+
     </div>
   );
 }
