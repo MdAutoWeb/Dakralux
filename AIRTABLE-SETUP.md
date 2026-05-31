@@ -18,18 +18,37 @@
 
 ### 2. Airtable Tabel Opzetten
 
-Maak een tabel genaamd **"Leads"** met deze kolommen:
+Tabel **DakraluxForm** (base `applKDA39gzFOp7Bm`):
 
-| Kolom Naam | Type             | Beschrijving                       |
-| ---------- | ---------------- | ---------------------------------- |
-| Naam       | Single line text | Volledige naam klant               |
-| Email      | Email            | Email adres                        |
-| Telefoon   | Phone number     | Telefoonnummer                     |
-| Dienst     | Single select    | Type dienst (dropdown)             |
-| Bericht    | Long text        | Bericht van klant                  |
-| Status     | Single select    | Nieuw, In behandeling, Afgehandeld |
-| Datum      | Date             | Datum van aanvraag                 |
-| Bron       | Single line text | Website Contactformulier           |
+### Bestaande kolommen (OK)
+
+| Kolom    | Type           | Opmerking                          |
+| -------- | -------------- | ---------------------------------- |
+| Naam     | Text           |                                    |
+| Email    | Email          |                                    |
+| Telefoon | Phone          |                                    |
+| Dienst   | Single select  | Zie diensten hieronder             |
+| Bericht  | Long text      |                                    |
+| Datum    | Created time   | Automatisch                        |
+| Status   | Single select  | Voeg optie **Nieuw** toe (zie hieronder) |
+
+### Nog handmatig toevoegen in Airtable
+
+De API-token kan geen kolommen aanmaken (`schema.bases:write` ontbreekt). Voeg deze kolommen zelf toe:
+
+| Kolom            | Type           | Opties / instellingen                                                                 |
+| ---------------- | -------------- | ------------------------------------------------------------------------------------- |
+| Gemeente         | Single line text |                                                                                     |
+| Urgentie         | Single select  | `Dringend (lek/schade)`, `Binnen 3 maanden`, `Planbaar`, `Gewoon info`              |
+| Prioriteit       | Single select  | `Hoog`, `Normaal`, `Laag`                                                            |
+| Volgende actie   | Date           |                                                                                     |
+| Notities         | Long text      | AI-samenvatting + score                                                               |
+| Bron             | Single select  | `Website formulier`                                                                  |
+| Lead score       | Number         | Geen decimalen (precision 0)                                                         |
+
+**Status:** voeg de optie **Nieuw** toe aan het Status-veld (naast Todo / In progress / Done). De website stuurt `Nieuw` bij elke lead.
+
+**Dienst:** voeg **Hellende Daken** toe als optie (het formulier gebruikt die naam; in Airtable staat nu o.a. “Platte Daken”).
 
 ### 3. API Key Ophalen
 

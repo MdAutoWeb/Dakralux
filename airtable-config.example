@@ -1,14 +1,31 @@
 # Airtable CRM Configuratie
 # Vervang deze waarden met jouw eigen Airtable gegevens
 
-# Je Airtable API Key (vind je in je Airtable account settings)
+# Je Airtable API Key (scope: data.records:write + schema.bases:write voor velden-script)
 AIRTABLE_API_KEY=your_airtable_api_key_here
 
-# Je Airtable Base ID (vind je in de URL van je base)
-AIRTABLE_BASE_ID=your_airtable_base_id_here
+# Dakralux base (standaard al ingevuld)
+AIRTABLE_BASE_ID=applKDA39gzFOp7Bm
+AIRTABLE_TABLE_ID=tblgMffABLKZQmxkY
 
-# De naam van je tabel in Airtable (standaard: "Leads")
+# Of gebruik tabelnaam i.p.v. table ID
 AIRTABLE_TABLE_NAME=Leads
+
+# Groq AI samenvatting in Notities
+GROQ_API_KEY=your_groq_api_key_here
+
+# hCaptcha (site key ook als NEXT_PUBLIC_ voor de frontend)
+NEXT_PUBLIC_HCAPTCHA_SITE_KEY=jouw_site_key
+HCAPTCHA_SITE_KEY=jouw_site_key
+HCAPTCHA_SECRET_KEY=jouw_secret_key
+
+# E-mail (Resend) + dashboard + herinneringen
+RESEND_API_KEY=re_...
+LEADS_NOTIFY_EMAIL=info@dakralux.be
+DAKRALUX_FROM_EMAIL=Dakralux <no-reply@dakralux.be>
+DAKRALUX_REPLY_TO=info@dakralux.be
+CRON_SECRET=genereer_lange_random_string
+LEADS_ADMIN_SECRET=genereer_andere_random_string
 
 # Voorbeeld:
 # AIRTABLE_API_KEY=key1234567890abcdef
